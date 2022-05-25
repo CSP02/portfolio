@@ -87,13 +87,19 @@ progress {
 
 
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
     .background {
         height: 100vh;
         width: min-content;
+        font-style: 1rem;
     }
-
-    #name {
-        font-size: 45px;
+    .matter, .langsKnown{
+      font-size: 1rem;
+    }
+    #name{
+      font-size: 1.5rem;
+    }
+    progress{
+      height: 2rem;
     }
 }
