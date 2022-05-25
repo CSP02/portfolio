@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #1f1f1f;
+    color: rgb(216, 216, 209);
+    font-family: 'Roboto', sans-serif;
+    font: 200;
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 176, 29);
+}
+
+.wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    perspective: 10px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+#name {
+    font-size: 72px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.background, .foreground {
+    position: absolute;
+}
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-20px) scale(3);
+}
+
+.foreground {
+    z-index: 1;
+    transform: translateZ(-10px) scale(2);
+}
+
+.matter {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #2f2f2f;
+    font-family: 'Poppins', sans-serif;
+    padding: 3rem;
+}
+
+.matter h1, .matter h3 {
+    font-family: 'Lobster', cursive;
+}
+
+.myProjects {
+    display: grid;
+}
+
+.projMatter span {
+    display: flex;
+}
+
+.langsKnown {
+    display: grid;
+}
+
+progress {
+    height: 3rem;
+    background-color: greenyellow;
+}
+
+
+
+@media screen and (min-width: 480px) {
+    .background {
+        height: 100vh;
+        width: min-content;
+    }
+
+    #name {
+        font-size: 45px;
+    }
+}
