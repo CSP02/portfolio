@@ -21,6 +21,46 @@ a {
     overflow-x: hidden;
     height: 100vh;
     perspective: 10px;
+    scroll-behavior: smooth;
+}
+
+.navigation {
+    height: 5rem;
+    position: fixed;
+    float: right;
+    width: 100vw;
+    transition: 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.navigation ul, .navigation ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 1rem;
+    border: none;
+    font-size: 1.3rem;
+    transition: 0.1s ease-in-out;
+}
+
+.navigation ul li:hover {
+    border-bottom: 3px solid rgb(219, 219, 219);
+    transition: 0.1s ease-in-out;
+}
+
+#nav {
+    position: fixed;
+    z-index: 2;
+}
+
+#hide {
+    font-size: 2rem;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+#hide:hover {
+    border-bottom: none;
 }
 
 .header {
@@ -68,6 +108,21 @@ a {
     font-family: 'Lobster', cursive;
 }
 
+.matter span {
+    display: flex;
+    margin: 2rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+#aboutMe, #theBot, #cspsh, #toggler, #methods, #x86oc {
+    height: 100vh;
+}
+
+#theBot p, #cspsh p, #toggler p, #methods p, #x86oc p {
+    width: 40vw;
+}
+
 .myProjects {
     display: grid;
 }
@@ -76,16 +131,54 @@ a {
     display: flex;
 }
 
-.langsKnown {
+.langsKnownWrapper {
     display: grid;
+    height: 90vh;
+}
+
+.contacts {
+    height: 80vh;
+}
+
+#langsKnown {
+    display: flex;
+}
+
+#firstFour, #secondFour {
+    display: grid;
+    margin: 2rem;
+}
+
+#social {
+    list-style-type: none;
+    display: flex;
+}
+
+.fa-brands, .fa-solid {
+    margin: 2rem;
+    font-size: 10rem;
 }
 
 progress {
-    height: 3rem;
-    background-color: greenyellow;
+    height: 2rem;
+    border-radius: 0.5rem;
 }
 
+::-webkit-progress-bar {
+    height: 2rem;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: #424141;
+    border-radius: 0.5rem;
+}
 
+::-webkit-progress-inner-element, ::-webkit-progress-value {
+    border-radius: 0.5rem;
+    background-color: rgb(255, 176, 29);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
 
 @media screen and (max-width: 480px) {
     .background {
@@ -93,13 +186,16 @@ progress {
         width: min-content;
         font-style: 1rem;
     }
-    .matter, .langsKnown{
-      font-size: 1rem;
+
+    .matter, .langsKnown {
+        font-size: 1rem;
     }
-    #name{
-      font-size: 1.5rem;
+
+    #name {
+        font-size: 1.5rem;
     }
-    progress{
-      height: 2rem;
+
+    progress {
+        height: 2rem;
     }
 }
