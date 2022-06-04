@@ -76,7 +76,10 @@ a {
 
 #name {
     font-size: 72px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Dancing Script', cursive; */
 }
 
 .background, .foreground {
