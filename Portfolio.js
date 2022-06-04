@@ -39,13 +39,13 @@ wrapper.addEventListener('scroll', (scroll) => {
         cspLi.style.opacity = 0;
     }
 })
-const contacts = [...document.getElementsByClassName("fa-brands")]
-const mailSvg = document.getElementById("mail")
-const randomX = Math.random() * 10 * 2 * Math.PI
-const randomY = Math.random() * 30 * 2 * Math.PI
-mailSvg.style.transform = `translateX(${randomX.toFixed()}px) translateY(${randomY.toFixed()}px)`
-contacts.forEach(contact => {
-    const randomX = Math.random() * 10 * 2 * Math.PI
-    const randomY = Math.random() * 30 * 2 * Math.PI
-    contact.style.transform = `translateX(${randomX.toFixed()}px) translateY(${randomY.toFixed()}px)`
-})
+// const contacts = [...document.getElementsByClassName("fa-brands")]
+// const mailSvg = document.getElementById("mail")
+// const randomX = Math.random() * 10 * 2 * Math.PI
+// const randomY = Math.random() * 30 * 2 * Math.PI
+// mailSvg.style.transform = `translateX(${randomX.toFixed()}px) translateY(${randomY.toFixed()}px)`
+// contacts.forEach(contact => {
+//     const randomX = Math.random() * 10 * 2 * Math.PI
+//     const randomY = Math.random() * 30 * 2 * Math.PI
+//     contact.style.transform = `translateX(${randomX.toFixed()}px) translateY(${randomY.toFixed()}px)`
+// })
