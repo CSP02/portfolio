@@ -247,13 +247,6 @@ progress {
         z-index: 1;
     }
 
-    .fa-angle-down, .fa-angle-right {
-        margin: 0rem;
-        padding: 0.7rem;
-        visibility: visible;
-        font-size: 1.5rem;
-    }
-
     #aboutMe {
         height: 70vh;
     }
@@ -305,5 +298,12 @@ progress {
 
     .fa-brands, .fa-solid {
         font-size: 2rem;
+    }
+    
+    .fa-angle-down, .fa-angle-right {
+        margin: 0rem;
+        padding: 0.7rem;
+        visibility: visible;
+        font-size: 1.5rem;
     }
 }
