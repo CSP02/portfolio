@@ -168,7 +168,7 @@ a {
     font-size: 10rem;
 }
 
-.fa-caret-down, .fa-caret-right {
+.fa-angle-down, .fa-angle-right {
     display: none;
     font-size: 0rem;
 }
@@ -247,7 +247,7 @@ progress {
         z-index: 1;
     }
 
-    .fa-caret-down, .fa-caret-right {
+    .fa-angle-down, .fa-angle-right {
         margin: 0rem;
         padding: 0.7rem;
         visibility: visible;
@@ -299,7 +299,7 @@ progress {
         flex-wrap: wrap;
     }
 
-    .fa-caret-down, .fa-caret-right {
+    .fa-angle-down, .fa-angle-right {
         transition: 0.1s ease-in-out;
     }
 

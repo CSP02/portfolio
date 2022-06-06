@@ -47,15 +47,15 @@ carret.addEventListener("click", () => {
     const toggler = new Toggler;
     if (carret.parentElement.style.opacity > 0) {
         toggler.toggleSlide('navUl', 'top', 0.6)
-        toggler.toggleClass('carretDown', 'fa-caret-down', 'fa-caret-right')
+        toggler.toggleClass('carretDown', 'fa-angle-right', 'fa-angle-down')
     }
 })
 
 window.onclick = function (click) {
     const toggler = new Toggler;
-    if (click.path[0] != carret) {
+    if (click.path[0] != carret && navUl.style.marginTop >= '0px') {
         navUl.style.marginTop = '-100vh';
         toggler.Inc()
-        toggler.toggleClass('carretDown', 'fa-caret-down', 'fa-caret-right')
+        toggler.toggleClass('carretDown', 'fa-angle-down', 'fa-angle-right')
     }
 }
