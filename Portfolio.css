@@ -41,10 +41,12 @@ a {
     border: none;
     font-size: 1.3rem;
     transition: 0.1s ease-in-out;
+    padding: 0rem;
 }
 
 .navigation ul li:hover {
     border-bottom: 3px solid rgb(219, 219, 219);
+    border-top: 3px solid rgb(219, 219, 219);
     transition: 0.1s ease-in-out;
 }
 
@@ -53,14 +55,18 @@ a {
     z-index: 2;
 }
 
+#navUl{
+    margin-top: 0px;
+}
+
 #hide {
+    display: flex;
+    margin: 2rem;
     font-size: 2rem;
     transition: 0.5s ease-in-out;
     opacity: 0;
-}
-
-#hide:hover {
-    border-bottom: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .header {
@@ -162,6 +168,11 @@ a {
     font-size: 10rem;
 }
 
+.fa-caret-down, .fa-caret-right {
+    display: none;
+    font-size: 0rem;
+}
+
 progress {
     height: 2rem;
     border-radius: 0.5rem;
@@ -195,10 +206,104 @@ progress {
     }
 
     #name {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     progress {
         height: 2rem;
+    }
+
+    #nav, .navigation {
+        height: 3rem;
+        display: grid;
+    }
+
+    .navigation ul {
+        display: grid;
+        margin: 0rem;
+        padding: 0rem;
+        width: 100vw;
+        height: 50vh;
+        align-items: center;
+        justify-items: center;
+        align-content: space-evenly;
+        z-index: 0;
+        margin-top: -200vh;
+        background-color: rgb(47, 47, 47);
+    }
+
+    #navUl{
+        margin-top: -200vh;
+    }
+
+    #hide {
+        display: flex;
+        height: 3rem;
+        margin: 0rem;
+        margin-left: 2rem;
+        font-size: 1.5rem;
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .fa-caret-down, .fa-caret-right {
+        margin: 0rem;
+        padding: 0.7rem;
+        visibility: visible;
+        font-size: 1.5rem;
+    }
+
+    #aboutMe {
+        height: 70vh;
+    }
+
+    #theBot, #cspsh, #toggler, #methods, #x86oc {
+        height: 50vh;
+    }
+
+    #theBot p, #cspsh p, #toggler p, #methods p, #x86oc p {
+        width: fit-content;
+    }
+
+    .projMatter span {
+        margin: 0rem;
+        padding: 0rem;
+        display: grid;
+        justify-items: center;
+    }
+
+    .matter img {
+        margin: 2rem;
+        height: 152px;
+        width: 152px;
+    }
+
+    #langsKnown {
+        display: grid;
+    }
+
+    #langsKnown div {
+        margin: 0rem;
+    }
+
+    #langsKnown progress {
+        margin: 0.5rem;
+    }
+
+    #contacts {
+        height: fit-content;
+    }
+
+    #social {
+        flex-wrap: wrap;
+    }
+
+    .fa-caret-down, .fa-caret-right {
+        transition: 0.1s ease-in-out;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 2rem;
     }
 }

@@ -27,9 +27,11 @@ const wrapper = document.getElementById('wrapper')
 const aboutMe = document.getElementById("aboutMe")
 const nav = document.getElementById("navigation")
 const cspLi = document.getElementById("hide");
-wrapper.addEventListener('scroll', (scroll) => {
+const navUl = document.getElementById('navUl')
+wrapper.addEventListener('scroll', () => {
     if (wrapper.scrollTop >= aboutMe.offsetHeight - 205) {
         nav.style.backgroundColor = 'rgba(47, 47, 47, 0.8)';
+        navUl.style.backdropColor = 'rgba(47,47,47, 1)';
         nav.style.backdropFilter = 'blur(24px)'
         cspLi.style.opacity = 1;
     }
@@ -39,13 +41,21 @@ wrapper.addEventListener('scroll', (scroll) => {
         cspLi.style.opacity = 0;
     }
 })
-// const contacts = [...document.getElementsByClassName("fa-brands")]
-// const mailSvg = document.getElementById("mail")
-// const randomX = Math.random() * 10 * 2 * Math.PI
-// const randomY = Math.random() * 30 * 2 * Math.PI
-// mailSvg.style.transform = `translateX(${randomX.toFixed()}px) translateY(${randomY.toFixed()}px)`
-// contacts.forEach(contact => {
-//     const randomX = Math.random() * 10 * 2 * Math.PI
-//     const randomY = Math.random() * 30 * 2 * Math.PI
-//     contact.style.transform = `translateX(${randomX.toFixed()}px) translateY(${randomY.toFixed()}px)`
-// })
+
+const carret = document.getElementById('carretDown')
+carret.addEventListener("click", () => {
+    const toggler = new Toggler;
+    if (carret.parentElement.style.opacity > 0) {
+        toggler.toggleSlide('navUl', 'top', 0.6)
+        toggler.toggleClass('carretDown', 'fa-caret-down', 'fa-caret-right')
+    }
+})
+
+window.onclick = function (click) {
+    const toggler = new Toggler;
+    if (click.path[0] != carret) {
+        navUl.style.marginTop = '-100vh';
+        toggler.Inc()
+        toggler.toggleClass('carretDown', 'fa-caret-down', 'fa-caret-right')
+    }
+}
