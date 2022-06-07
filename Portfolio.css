@@ -300,7 +300,8 @@ progress {
         font-size: 2rem;
     }
     
-    .fa-angle-down, .fa-angle-right {
+    .fa-angle-down, .fa-angle-right, #carretDown {
+        display: block;
         margin: 0rem;
         padding: 0.7rem;
         visibility: visible;
