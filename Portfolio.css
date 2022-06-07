@@ -55,9 +55,9 @@ a {
     z-index: 2;
 }
 
-#navUl{
+/* #navUl{
     margin-top: 0px;
-}
+} */
 
 #hide {
     display: flex;
@@ -124,11 +124,11 @@ a {
     justify-content: space-between;
 }
 
-#aboutMe, #theBot, #cspsh, #toggler, #methods, #x86oc {
+#aboutMe, .projMatter {
     height: 100vh;
 }
 
-#theBot p, #cspsh p, #toggler p, #methods p, #x86oc p {
+.projMatter p {
     width: 40vw;
 }
 
@@ -168,7 +168,7 @@ a {
     font-size: 10rem;
 }
 
-.fa-angle-down, .fa-angle-right {
+.fa-angle-down, .fa-angle-right, #carretDown {
     display: none;
     font-size: 0rem;
 }
@@ -247,7 +247,8 @@ progress {
         z-index: 1;
     }
 
-    .fa-angle-down, .fa-angle-right {
+    .fa-angle-down, .fa-angle-right, #carretDown {
+        display: block;
         margin: 0rem;
         padding: 0.7rem;
         visibility: visible;
