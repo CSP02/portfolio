@@ -251,11 +251,11 @@ progress {
         height: 70vh;
     }
 
-    #theBot, #cspsh, #toggler, #methods, #x86oc {
+    .projMatter{
         height: 50vh;
     }
 
-    #theBot p, #cspsh p, #toggler p, #methods p, #x86oc p {
+    .projMatter p {
         width: fit-content;
     }
 
