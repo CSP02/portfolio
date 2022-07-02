@@ -16,6 +16,7 @@ a {
     color: rgb(255, 176, 29);
 }
 
+
 .wrapper {
     overflow-y: auto;
     overflow-x: hidden;
@@ -55,9 +56,6 @@ a {
     z-index: 2;
 }
 
-/* #navUl{
-    margin-top: 0px;
-} */
 
 #hide {
     display: flex;
@@ -173,6 +171,10 @@ a {
     font-size: 0rem;
 }
 
+#aboutMe, #myProjects, .langsKnownWrapper, #contacts {
+    padding-top: 5rem;
+}
+
 progress {
     height: 2rem;
     border-radius: 0.5rem;
@@ -232,7 +234,7 @@ progress {
         background-color: rgb(47, 47, 47);
     }
 
-    #navUl{
+    #navUl {
         margin-top: -200vh;
     }
 
@@ -251,7 +253,7 @@ progress {
         height: 70vh;
     }
 
-    .projMatter{
+    .projMatter {
         height: 50vh;
     }
 
@@ -299,7 +301,7 @@ progress {
     .fa-brands, .fa-solid {
         font-size: 2rem;
     }
-    
+
     .fa-angle-down, .fa-angle-right, #carretDown {
         display: block;
         margin: 0rem;
