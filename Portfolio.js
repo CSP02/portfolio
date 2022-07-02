@@ -32,12 +32,14 @@ wrapper.addEventListener('scroll', () => {
     if (wrapper.scrollTop >= aboutMe.offsetHeight - 205) {
         nav.style.backgroundColor = 'rgba(47, 47, 47, 0.8)';
         navUl.style.backdropColor = 'rgba(47,47,47, 1)';
-        nav.style.backdropFilter = 'blur(24px)'
+        nav.style.backdropFilter = 'blur(24px)';
+        document.getElementById('down').style.visibility = 'hidden';
         cspLi.style.opacity = 1;
     }
     else {
         nav.style.backgroundColor = 'transparent';
         nav.style.backdropFilter = 'blur(0px)'
+        document.getElementById('down').style.visibility = 'visible';
         cspLi.style.opacity = 0;
     }
 })
