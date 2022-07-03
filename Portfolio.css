@@ -16,6 +16,55 @@ a {
     color: rgb(255, 176, 29);
 }
 
+#loadScreen {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color: rgba(43, 43, 43, 0.6);
+    backdrop-filter: blur(32px);
+    z-index: 20;
+}
+
+#loadScreen:hover {
+    cursor: none;
+}
+
+#loadScreen p {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+}
+
+#vectors {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    visibility: hidden;
+    z-index: 20;
+    animation-name: colorChange;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.boxes {
+    background-color: rgb(119, 255, 119);
+    height: 50px;
+    width: 50px;
+    margin: 2rem;
+    border-radius: 40%;
+    border: 3px solid red;
+    position: absolute;
+}
+
+#score{
+    margin: 2rem;
+    position: absolute;
+}
 
 .wrapper {
     overflow-y: auto;
@@ -122,6 +171,7 @@ a {
     margin: 2rem;
     padding: 1rem;
     justify-content: space-between;
+    align-items: center;
 }
 
 #aboutMe, .projMatter {
@@ -204,7 +254,7 @@ a {
     padding-top: 5rem;
 }
 
-#down{
+#down {
     position: fixed;
     top: 80%;
     font-size: inherit;
@@ -216,20 +266,46 @@ a {
 }
 
 @keyframes swipe {
-    0%{
+    0% {
         top: 80%;
     }
-    40%{
+
+    40% {
         top: 86%;
     }
-    50%{
+
+    50% {
         top: 83%;
     }
-    60%{
+
+    60% {
         top: 86%;
     }
-    100%{
+
+    100% {
         top: 80%;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: rgb(255, 105, 105);
+    }
+
+    25% {
+        background-color: rgb(108, 255, 105);
+    }
+
+    50% {
+        background-color: rgb(105, 245, 255);
+    }
+
+    75% {
+        background-color: rgb(208, 105, 255);
+    }
+
+    100% {
+        background-color: rgb(255, 105, 105);
     }
 }
 
@@ -278,7 +354,7 @@ progress {
         display: grid;
     }
 
-    .toTop{
+    .toTop {
         display: none;
     }
 
