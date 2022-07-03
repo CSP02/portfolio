@@ -91,7 +91,6 @@ loadScreen.addEventListener('mousemove', (mouseData) => {
     }
 })
 window.onload = function () {
-    //remove mousemove eventlistener from loadscreen
     loadScreen.removeEventListener('mousemove', (mouseData) => {
         console.log('removed')
     })
@@ -100,7 +99,6 @@ window.onload = function () {
         setInterval(hide, 10);
         document.body.removeChild(loadScreen);
     }, 1000);
-    // setInterval(hide, 10);
 
     function hide() {
         opacity = Number(loadScreen.style.opacity);
@@ -113,8 +111,4 @@ window.onload = function () {
             clearInterval();
         }
     }
-    // document.body.removeChild(loadScreen);
-    // setTimeout(() => {
-    //     document.body.removeChild(loadScreen);
-    // }, 1000);
 }
