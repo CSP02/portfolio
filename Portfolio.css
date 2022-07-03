@@ -345,6 +345,10 @@ progress {
         font-size: 2rem;
     }
 
+    #loadScreen{
+        display: none;
+    }
+
     progress {
         height: 2rem;
     }
