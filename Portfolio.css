@@ -174,10 +174,6 @@ a {
     align-items: center;
 }
 
-#aboutMe, .projMatter {
-    height: 100vh;
-}
-
 .projMatter p {
     width: 40vw;
 }
@@ -260,7 +256,6 @@ a {
     font-size: inherit;
     animation-name: swipe;
     animation-duration: 2s;
-    /* -webkit-animation-name: swipe; */
     animation-iteration-count: infinite;
     animation-direction: normal;
 }
