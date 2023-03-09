@@ -61,13 +61,13 @@ a {
     position: absolute;
 }
 
-#score{
+#score {
     margin: 2rem;
     position: absolute;
 }
 
 .wrapper {
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     height: 100vh;
     perspective: 10px;
@@ -86,7 +86,8 @@ a {
     z-index: 19;
 }
 
-.navigation ul, .navigation ul li {
+.navigation ul,
+.navigation ul li {
     display: inline-block;
     list-style-type: none;
     margin: 1rem;
@@ -94,6 +95,12 @@ a {
     font-size: 1.3rem;
     transition: 0.1s ease-in-out;
     padding: 0rem;
+}
+
+#currentViewing {
+    position: absolute;
+    width: max-content;
+    left: 7rem;
 }
 
 .navigation ul li:hover {
@@ -137,7 +144,8 @@ a {
     /* font-family: 'Dancing Script', cursive; */
 }
 
-.background, .foreground {
+.background,
+.foreground {
     position: absolute;
 }
 
@@ -155,21 +163,18 @@ a {
 }
 
 .matter {
-    overflow-y: auto;
-    overflow-x: hidden;
     background-color: #2f2f2f;
     font-family: 'Poppins', sans-serif;
     padding: 3rem;
 }
 
-.matter h1, .matter h3 {
+.matter h1,
+.matter h3 {
     font-family: 'Lobster', cursive;
 }
 
 .matter span {
     display: flex;
-    margin: 2rem;
-    padding: 1rem;
     justify-content: space-between;
     align-items: center;
 }
@@ -186,6 +191,16 @@ a {
     display: flex;
 }
 
+.projMatter {
+    position: sticky;
+    position: -webkit-sticky;
+    background-color: #2f2f2f;
+    padding: 1rem 6rem;
+    top: 80px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+
 .langsKnownWrapper {
     display: grid;
     height: 90vh;
@@ -199,7 +214,8 @@ a {
     display: flex;
 }
 
-#firstFour, #secondFour {
+#firstFour,
+#secondFour {
     display: grid;
     margin: 2rem;
 }
@@ -209,12 +225,15 @@ a {
     display: flex;
 }
 
-.fa-brands, .fa-solid {
+.fa-brands,
+.fa-solid {
     margin: 2rem;
     font-size: 10rem;
 }
 
-.fa-angle-down, .fa-angle-right, #carretDown {
+.fa-angle-down,
+.fa-angle-right,
+#carretDown {
     display: none;
     font-size: 0rem;
 }
@@ -246,8 +265,13 @@ a {
     border-bottom: none;
 }
 
-#aboutMe, #myProjects, .langsKnownWrapper, #contacts {
+#aboutMe,
+#myProjects,
+.langsKnownWrapper,
+#contacts {
     padding-top: 5rem;
+    display: grid;
+    align-items: center;
 }
 
 #down {
@@ -316,7 +340,8 @@ progress {
     border-radius: 0.5rem;
 }
 
-::-webkit-progress-inner-element, ::-webkit-progress-value {
+::-webkit-progress-inner-element,
+::-webkit-progress-value {
     border-radius: 0.5rem;
     background-color: rgb(255, 176, 29);
 }
@@ -332,7 +357,8 @@ progress {
         font-style: 1rem;
     }
 
-    .matter, .langsKnown {
+    .matter,
+    .langsKnown {
         font-size: 1rem;
     }
 
@@ -340,7 +366,7 @@ progress {
         font-size: 2rem;
     }
 
-    #loadScreen{
+    #loadScreen {
         display: none;
     }
 
@@ -348,7 +374,8 @@ progress {
         height: 2rem;
     }
 
-    #nav, .navigation {
+    #nav,
+    .navigation {
         height: 3rem;
         display: grid;
     }
@@ -391,7 +418,11 @@ progress {
     }
 
     .projMatter {
-        height: max-content;
+        display: grid;
+        height: 77vh;
+        align-content: space-around;
+        padding: 1rem 1rem;
+        font-size: 16pt;
     }
 
     .projMatter p {
@@ -431,19 +462,27 @@ progress {
         flex-wrap: wrap;
     }
 
-    .fa-angle-down, .fa-angle-right {
+    .fa-angle-down,
+    .fa-angle-right {
         transition: 0.1s ease-in-out;
     }
 
-    .fa-brands, .fa-solid {
+    .fa-brands,
+    .fa-solid {
         font-size: 2rem;
     }
 
-    .fa-angle-down, .fa-angle-right, #carretDown {
+    .fa-angle-down,
+    .fa-angle-right,
+    #carretDown {
         display: block;
         margin: 0rem;
         padding: 0.7rem;
         visibility: visible;
         font-size: 1.5rem;
+    }
+
+    #currentViewing {
+        display: none;
     }
 }

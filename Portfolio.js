@@ -4,20 +4,20 @@ const thirdSvg = [...document.getElementById("background").getElementsByClassNam
 
 document.getElementById("header").addEventListener("mousemove", () => {
     firstSvg.forEach(path => {
-        const x = (window.innerWidth - event.pageX * 1) / 90;
-        const y = (window.innerHeight - event.pageY * 1) / 90;
+        const x = (window.innerWidth - scroll.pageX * 1) / 90;
+        const y = (window.innerHeight - scroll.pageY * 1) / 90;
 
         path.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
     secondSvg.forEach(path => {
-        const x = (window.innerWidth - event.pageX * 2) / 90;
-        const y = (window.innerHeight - event.pageY * 2) / 90;
+        const x = (window.innerWidth - scroll.pageX * 2) / 90;
+        const y = (window.innerHeight - scroll.pageY * 2) / 90;
 
         path.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
     thirdSvg.forEach(path => {
-        const x = (window.innerWidth - event.pageX * 3) / 90;
-        const y = (window.innerHeight - event.pageY * 3) / 90;
+        const x = (window.innerWidth - scroll.pageX * 3) / 90;
+        const y = (window.innerHeight - scroll.pageY * 3) / 90;
 
         path.style.transform = `translateX(${x}px) translateY(${y}px)`;
     });
@@ -96,7 +96,7 @@ window.onload = function () {
     })
     loadScreen.innerHTML = `<p>Hurray! you scored ${score} points. Portfolio is loaded</p>`;
     setTimeout(() => {
-        setInterval(hide, 10);
+        // setInterval(hide, 10);
         document.body.removeChild(loadScreen);
     }, 1000);
 
@@ -110,5 +110,21 @@ window.onload = function () {
         else {
             clearInterval();
         }
+        return
     }
 }
+document.getElementById('wrapper').addEventListener('scroll', scroll => {
+    const projects = document.getElementsByClassName('projMatter');
+    [...document.getElementsByTagName('h1')].forEach(h1 => {
+        if(Math.round(h1.getBoundingClientRect().bottom) <= window.innerHeight){
+            document.getElementById('currentViewing').innerText = h1.innerText;
+        }
+    });
+    [...projects].forEach(project => {
+        if (Math.round(project.getBoundingClientRect().bottom) <= window.innerHeight) {
+            project.style.opacity = 1;
+        }else{
+            project.style.opacity = 0;
+        }
+    })
+})
