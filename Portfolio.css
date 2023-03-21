@@ -201,17 +201,8 @@ a {
     transition: .2s ease-in-out;
 }
 
-.langsKnownWrapper {
-    display: grid;
-    height: 90vh;
-}
-
 .contacts {
     height: 80vh;
-}
-
-#langsKnown {
-    display: flex;
 }
 
 #firstFour,
@@ -269,7 +260,6 @@ a {
 
 #aboutMe,
 #myProjects,
-.langsKnownWrapper,
 #contacts {
     padding-top: 5rem;
     display: grid;
@@ -359,8 +349,7 @@ progress {
         font-style: 1rem;
     }
 
-    .matter,
-    .langsKnown {
+    .matter{
         font-size: 1rem;
     }
 
@@ -443,19 +432,7 @@ progress {
         height: 152px;
         width: 152px;
     }
-
-    #langsKnown {
-        display: grid;
-    }
-
-    #langsKnown div {
-        margin: 0rem;
-    }
-
-    #langsKnown progress {
-        margin: 0.5rem;
-    }
-
+    
     #contacts {
         height: fit-content;
     }
